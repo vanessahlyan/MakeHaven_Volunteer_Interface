@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <th>Bought/Sold</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Transaction price</th>
+            <th>Date & Time of transaction</th>
+        </thead>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{transaction["nature"]}}</td>
+            <td>{{transaction["symbol"]}}</td>
+            <td>{{transaction["shares"]}}</td>
+            <td>{{transaction["price"]}}</td>
+            <td>{{transaction["time"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

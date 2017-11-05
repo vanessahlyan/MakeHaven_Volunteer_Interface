@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Current price of stock</th>
+            <th>Value</th>
+        </thead>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{stock["symbol"]}}</td>
+            <td>{{stock["SUM(shares)"]}}</td>
+            <td>{{stock["current_price"]}}</td>
+            <td>{{stock["value"]}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>Cash</td><td></td><td></td><td>{{cash}}</td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td>{{grand_total}}</td>
+        </tr>
+    </table>
+{% endblock %}
