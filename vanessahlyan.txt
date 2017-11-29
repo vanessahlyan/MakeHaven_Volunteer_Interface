@@ -1,0 +1,99 @@
+***
+Name
+***
+
+     Vanessa Yan, Sally Ma
+
+***
+Email
+***
+
+     vanessa.yan@yale.edu
+
+***
+Affiliation
+***
+
+     CS50 at Yale
+
+***
+Short answers for the below suffice. Remember: if you want to alter your plan for your project (and obtain approval), be sure to email your section leader (or assigned advisor) directly.
+What have you done for your project so far?
+***
+
+     We have set up a database and written out the Python code for the volunteer credit system.
+
+***
+What have you not done for your project yet?
+***
+
+     We need to figure out how to display the chore cards and how to automatically make chores pop up according to their respective recurrence cycles.
+
+***
+What problems, if any, have you encountered?
+***
+
+     We are not sure how to manage the recurrence cycles of tasks.
+We had trouble viewing the SQL database at the same time. 
+We were unable to insert registration information into our SQL user table.
+
+***
+If you used it (much) this term, what did you think of CS50 Discourse (the course's Q&A forum)?
+***
+
+     Liked
+
+***
+If you used CS50 Discourse and have also used Piazza (in other courses), which do you prefer?
+***
+
+     Neutral
+
+***
+Why do you feel the way you do about CS50 Discourse and/or Piazza? (Do just make clear which tool you're complimenting or critiquing.)
+***
+
+     We like CS50 Discourse because we usually get feedback quickly.
+
+***
+Just a reminder that from 7pm on Thu 11/30 until 7am on Fri 12/1 is the CS50 Hackathon, an epic all-nighter during which you can dive into your final project㒓泅 implementation alongside classmates (from Harvard and Yale alike!) and staff.
+ 
+
+Be sure to register asap at https://cs50.harvard.edu/register if you'd like to attend! Space will be limited!
+***
+
+     BLANK
+
+***
+Just a reminder that from 7pm on Thu 11/30 until 7am on Fri 12/1 is the CS50 Hackathon in Cambridge, an epic all-nighter during which you can dive into your final project㒓泅 implementation alongside classmates (from Harvard and Yale alike!) and staff.
+ 
+
+Be sure to register asap at https://cs50.yale.edu/register if you'd like to attend! Space will be limited! Free charter buses will be provided to and from Cambridge!
+***
+
+     Not planning to register or attend!
+
+***
+And on Fri 12/8 is the CS50 Fair! If you're the Facebook type, click Going at https://www.facebook.com/events/2073928902829806/ and invite 2+ friends!
+***
+
+     BLANK
+
+***
+And on Mon 12/11 is the CS50 Fair! If you're the Facebook type, click Going at https://www.facebook.com/events/632820606841802/ and invite 2+ friends!
+***
+
+     Okay!
+
+***
+Would you be up for helping with setup for the CS50 Fair on Thu 12/7 (the day before the Fair) and/or on Fri 12/8 morning (the hours before the Fair)? It's fun! And a good way to get to know the staff! If so, we'll follow up with you via email to figure out when you're free.
+***
+
+     BLANK
+
+***
+Would you be up for helping with setup for the CS50 Fair on Sun 12/10 (the day before the Fair) and/or on Mon 12/11 morning (the hours before the Fair)? It's fun! And a good way to get to know the staff! If so, we'll follow up with you via email to figure out when you're free.
+***
+
+     Sure, I'd be willing to help with setup (unless my schedule changes)
+
