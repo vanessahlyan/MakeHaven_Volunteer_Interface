@@ -55,7 +55,11 @@
                                     <h4>Start Date: {{ row["start_date"] }}</h4>
                                     <h4>Recurs every {{ row["recurrence_cycle"] }} day(s)</h4>
                                     <h4>Task Score: {{ row["task_score"] }} </h4>
-                                    <h5> Sign Up: <input name = "task" value = "{{ row['task'] }}" type = "submit"
+                                    {% if row["claimed"] == 0 %}
+                                    <h4>claimed by: {{row["username"]}}</h4>
+                                    {% endif %}
+                                    <h5> Sign Up: <input name = "task" value = "{{row["task"]}}" type = "submit"
+
                                     {% if row["claimed"] == 1 %}
                                         class=buttonBasic
 
