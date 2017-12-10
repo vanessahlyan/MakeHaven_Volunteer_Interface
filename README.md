@@ -1,3 +1,5 @@
+(Note: the program requires the module "dateutil", thus any CS50 IDE server needs to download python-dateutil package by executing the following two commands: "sudo apt-get install python-pip"; "sudo pip install python-dateutil".)
+
 Our project is a volunteer community interface for a local service organization called MakeHaven. We aim to enhance motivation, communication, and organization for volunteer work through various functionalities. The project is stored in CS50 IDE and is compiled through Flask.
 
 To browse the website, a volunteer would need to register an account on the website. The user's account information would be stored in the table "users" in our database "project.db."
