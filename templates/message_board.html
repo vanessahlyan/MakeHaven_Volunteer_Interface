@@ -16,21 +16,19 @@
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<h1>Leave a message here.</h1><br>
-				<form action="/messageboard" method="post" id="userform">
-					<input autofocus class="form-control" name="username" placeholder="Username" type="text"/>
-					<br><br>
-					<textarea class="form-control" rows="7" id="submission" cols="50" name="message" form="userform" placeholder="Messsage"></textarea>
+				<form action="/message_board" method="post" id="userform">
+					<textarea class="form-control" rows="3" id="submission" cols="50" name="message" form="userform" placeholder="Message"></textarea>
 					<br><br><button class="buttonBasic" type="submit">Send</button>
 				</form>
 				<hr>
 			</div>
 			<br></br>
+
 			<div id="user">
 				<div id="displayuserinfo">
-
 				<ul>
 		            <center><h2>Admin Notifications</h2></center><br>
-					{% for message in messages %}
+					{% for message in admin_messages %}
 		            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message["comment"]}}</b></li>
 		            {% endfor %}
         		</ul>
@@ -44,12 +42,14 @@
 			        <thead>
 			            <th>Username</th>
 			            <th>Comment</th>
+			            <th> Post Time </th>
 			        </thead>
 			        <tbody>
 			            {% for entry in forum %}
 			                <tr>
 			                    <td> {{ entry["username"] }}</td>
 			                    <td id="message"><p class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ entry["comment"] }}</p></td>
+			                	<td> {{ entry["post_time"] }} </td>
 			                </tr>
 			            {% endfor %}
 			        </tbody>

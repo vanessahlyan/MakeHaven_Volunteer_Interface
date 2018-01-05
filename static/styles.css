@@ -269,7 +269,7 @@ border: black;
 
 
 #submission {
-
+    cursor: auto;
 
 }
 
@@ -433,6 +433,28 @@ border: black;
     color: white;
 }
 
+.buttonBasic2 {
+    background-color: lightgrey;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.1s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttonBasic2:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: grey;
+}
 
 /* style specific task cards with a lined paper style */
 #taskcard li {
@@ -454,6 +476,39 @@ border: black;
 }
 
 
+/* Style Admin Add Task Button */
+#add1 {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#add2 {
+    padding: 10px 15px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+
+}
+
+#add3 {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#add4 {
+    padding: 10px 15px;
+    width: 100%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+
+}
 /* style task cards */
 a.button1:link {
     background: #FEF5F8; /* light pink */

@@ -52,11 +52,14 @@
             <div class="collapse navbar-collapse" id="navbar">
                 {% if session.user_id %}
                     <ul class="navbar-nav mr-auto mt-2">
-                        <li class="nav-item"><a class="nav-link" href="/user_info">User Info&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/user_info">Admin Info &nbsp;&nbsp;&nbsp;|</a></li>
                         <li class="nav-item"><a class="nav-link" href="/tasks">All Tasks&nbsp;&nbsp;&nbsp;|</a></li>
                         <li class="nav-item"><a class="nav-link" href="/checkin">Check In&nbsp;&nbsp;&nbsp;|</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/rankings">User Rankings&nbsp;&nbsp;&nbsp;|</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/message_board">Message Board</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/add_tasks">Add Tasks&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/remove_tasks">Remove Tasks&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin_message_board">Message Board&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/rankings">Volunteer Rankings</a></li>
+
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>

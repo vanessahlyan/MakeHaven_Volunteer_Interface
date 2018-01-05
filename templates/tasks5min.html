@@ -1,4 +1,9 @@
-{% extends "layout.html" %}
+{% if admin == 1 %}
+    {% extends "layout.html" %}
+{% endif %}
+{% if admin == 0 %}
+    {% extends "admin_layout.html" %}
+{% endif %}
 
 {% block title %}
     Tasks Less than 5 min

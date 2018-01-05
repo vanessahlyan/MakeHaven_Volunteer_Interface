@@ -1,17 +1,10 @@
-{% if admin == 1 %}
-    {% extends "layout.html" %}
-{% endif %}
-{% if admin == 0 %}
-    {% extends "admin_layout.html" %}
-{% endif %}
+{% extends "admin_layout.html" %}
 
 {% block title %}
-    Tasks Greater than 30min
+    Remove Tasks
 {% endblock %}
 
-
 {% block main %}
-
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <!-- Left Navigation Bar for filtering -->
@@ -49,8 +42,10 @@
                 <br>
                 <div class="jumbotron">
                     <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
+                    <h1> Remove Tasks </h1>
+                    <br>
                     <hr>
-                    <form action="/signup" method="post">
+                    <form action="/remove_tasks" method="post">
                         <ol id="tasklist">
                             {% for row in tasks %}
                                 <li>
@@ -63,18 +58,7 @@
                                     {% if row["claimed"] == 0 %}
                                     <h4>claimed by: {{row["username"]}}</h4>
                                     {% endif %}
-                                    <h5> Sign Up: <input name = "task" value = "{{row["task"]}}" type = "submit"
-
-                                    {% if row["claimed"] == 1 %}
-                                        class=buttonBasic
-
-                                    {% endif %}
-                                    {% if row["claimed"] == 0 %}
-                                        class=button0
-                                        disabled
-
-                                    {% endif %}
-                                    >
+                                    <h2>REMOVE <input name = "task" value = "{{row["task"]}}" type = "submit" class=buttonBasic> </h2>
                                 </li>
                                 <hr>
                             {% endfor %}

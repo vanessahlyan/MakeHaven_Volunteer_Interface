@@ -1,10 +1,16 @@
-{% extends "layout.html" %}
+{% if admin == 1 %}
+    {% extends "layout.html" %}
+{% endif %}
+{% if admin == 0 %}
+    {% extends "admin_layout.html" %}
+{% endif %}
 
 {% block title %}
     User Info
 {% endblock %}
 
 {% block main %}
+
 <div id="user">
     <div id="displayuserinfo">
         <ul>
@@ -18,8 +24,7 @@
         </ul>
     </div>
 </div>
+
 <hr>
-
-<p><h3>You don't have any active tasks.</h3></p>
-
+You have no outstanding tasks.
 {% endblock %}

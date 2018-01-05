@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
     <head>
-
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -13,36 +11,21 @@
 
         <link href="/static/styles.css" rel="stylesheet"/>
 
+        <script src="/static/scripts.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
-        <!-- AddEvent button script -->
-        <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
-        <!-- AddEvent Settings -->
-        <script type="text/javascript">
-        window.addeventasync = function(){
-            addeventatc.settings({
-                appleical  : {show:true, text:"Apple Calendar"},
-                google     : {show:true, text:"Google <em>(online)</em>"},
-                outlook    : {show:true, text:"Outlook"},
-                outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
-                yahoo      : {show:true, text:"Yahoo <em>(online)</em>"}
-            });
-        };
-        </script>
     </head>
 
-        <title>MakeHaven</title>
+        <title>MakeHaven: Home Page</title>
 
     </head>
+
 
     <body>
-        <center>
-            <img src="https://cdn.evbuc.com/images/18571895/148573199919/1/logo.png" style="padding: 1px; border: thick inset grey;" alt="MakeHaven"/>
-        </center>
+        <!-- Top Navigation Bar -->
         <nav id="topbar" class="navbar navbar-expand-md navbar-light bg-light border">
             <a class="navbar-brand" href="/"><span class="red">MakeHaven</span></a>
 
@@ -52,11 +35,14 @@
             <div class="collapse navbar-collapse" id="navbar">
                 {% if session.user_id %}
                     <ul class="navbar-nav mr-auto mt-2">
-                        <li class="nav-item"><a class="nav-link" href="/user_info">User Info&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/user_info">Admin Info &nbsp;&nbsp;&nbsp;|</a></li>
                         <li class="nav-item"><a class="nav-link" href="/tasks">All Tasks&nbsp;&nbsp;&nbsp;|</a></li>
                         <li class="nav-item"><a class="nav-link" href="/checkin">Check In&nbsp;&nbsp;&nbsp;|</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/rankings">User Rankings&nbsp;&nbsp;&nbsp;|</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/message_board">Message Board</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/add_tasks">Add Tasks&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/remove_tasks">Remove Tasks&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin_message_board">Message Board&nbsp;&nbsp;&nbsp;|</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/rankings">Volunteer Rankings</a></li>
+
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
@@ -70,27 +56,27 @@
             </div>
         </nav>
 
-        <main class="container-fluid">
-            {% if get_flashed_messages() %}
-            <header>
-                <div class="alert alert-danger alert-dismissable border text-center" role="alert">
-                    {{ get_flashed_messages() | join(" ") }}
+        <!-- Carousel of slides with captions-->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div id="darkbg1"></div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2><font size ="7">Welcome, {{ firstname }}. </font></h2>
+                    <br><br>
+                    <div id="upcoming">
+                        <h2>There are {{ count }} outstanding messages to be reviewed.</h2>
+                        <h4><font size="3">Go to Message Board to review messages.</font></h4>
+                        <hr class="index">
+                    </div>
+                    <h3>"Immortality is to live your life doing good things, and leaving your mark behind." </h3>
+                  </div>
                 </div>
-            </header>
-            {% endif %}
-            <br>
-            <br>
-            {% block main %}{% endblock %}
-            <br>
-            <br>
-            <footer>
-                <hr class="my-4">
-                <p>
-                    <h6>© Vanessa Yan and Sally Ma 2017</h6>
-                </p>
-            </footer>
-        </main>
 
     </body>
+
 
 </html>

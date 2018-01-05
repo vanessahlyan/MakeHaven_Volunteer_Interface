@@ -1,4 +1,10 @@
-{% extends "layout.html" %}
+{% if admin == 1 %}
+    {% extends "layout.html" %}
+{% endif %}
+{% if admin == 0 %}
+    {% extends "admin_layout.html" %}
+{% endif %}
+
 
 {% block title %}
     All Tasks
@@ -44,15 +50,16 @@
                 <br>
                 <div class="jumbotron">
                     <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
+                    {% if admin == 1 %}
                     <h3>If this is your first time, make sure to watch the instructional video before signing up for tasks!</h3>
                     <div class="embed-responsive embed-responsive-16by9">https://www.youtube.com/watch?v=v-uc5Qnn8G8
                       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v-uc5Qnn8G8" allowfullscreen></iframe>
                     </div>
 
                     <br><br><br>
-                    <ul>
-                        <li><h1>MakeHaven Tasks</h1></li>
-                    </ul>
+                    {% endif %}
+                    <h1>MakeHaven Tasks</h1>
+
                     <br>
                     <hr>
                     <form action="/signup" method="post">
